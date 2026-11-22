@@ -30,7 +30,7 @@ jobs:
           if [ -f .template_version ]; then
             LOCAL_VER=$(cat .template_version)
             LATEST_VER=$(git ls-remote --tags --sort=-v:refname \
-              https://github.com/ycpss91255-docker/template.git \
+              https://github.com/ycpss91255-lab/template.git \
               | grep -oP 'refs/tags/v\d+\.\d+\.\d+$' | head -1 | sed 's|refs/tags/||')
             if [ -n "${LATEST_VER}" ] && [ "${LOCAL_VER}" != "${LATEST_VER}" ]; then
               echo "::warning::template ${LOCAL_VER} → ${LATEST_VER} available"

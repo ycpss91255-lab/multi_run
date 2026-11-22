@@ -1,6 +1,6 @@
 # multi_run
 
-[![CI](https://github.com/ycpss91255-docker/multi_run/actions/workflows/self-test.yaml/badge.svg)](https://github.com/ycpss91255-docker/multi_run/actions/workflows/self-test.yaml)
+[![CI](https://github.com/ycpss91255-lab/multi_run/actions/workflows/self-test.yaml/badge.svg)](https://github.com/ycpss91255-lab/multi_run/actions/workflows/self-test.yaml)
 [![License](https://img.shields.io/badge/License-Apache--2.0-blue?style=flat-square)](./LICENSE)
 
 Launch multiple Docker containers from different workspaces simultaneously.
@@ -41,13 +41,13 @@ When working with multiple ROS workspace or Docker environments, you often need 
 
 **multi_run** solves this by managing all your Docker workspace in one place. It merges multiple `compose.yaml` files into a single file with unique service names, so you can start, stop, and manage all containers with simple commands.
 
-Works with any [template](https://github.com/ycpss91255-docker/template)-based repo.
+Works with any [template](https://github.com/ycpss91255-lab/template)-based repo.
 
 ## Prerequisites
 
 - Docker + Docker Compose v2
 - Python 3 with `pyyaml` (`pip install pyyaml`)
-- Docker repos built with [template](https://github.com/ycpss91255-docker/template) (each must have `compose.yaml` + `.env`)
+- Docker repos built with [template](https://github.com/ycpss91255-lab/template) (each must have `compose.yaml` + `.env`)
 
 ## Getting Started
 
@@ -55,7 +55,7 @@ Works with any [template](https://github.com/ycpss91255-docker/template)-based r
 
 ```bash
 cd ~/Desktop/docker   # or wherever you keep your Docker repos
-git clone git@github.com:ycpss91255-docker/multi_run.git
+git clone git@github.com:ycpss91255-lab/multi_run.git
 cd multi_run
 ```
 
