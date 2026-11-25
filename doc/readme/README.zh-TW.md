@@ -1,6 +1,6 @@
 # multi_run
 
-[![Self Test](https://github.com/ycpss91255-docker/multi_run/actions/workflows/self-test.yaml/badge.svg)](https://github.com/ycpss91255-docker/multi_run/actions/workflows/self-test.yaml)
+[![Self Test](https://github.com/ycpss91255-lab/multi_run/actions/workflows/self-test.yaml/badge.svg)](https://github.com/ycpss91255-lab/multi_run/actions/workflows/self-test.yaml)
 
 ![Language](https://img.shields.io/badge/Language-Bash-blue?style=flat-square)
 ![Testing](https://img.shields.io/badge/Testing-Bats-orange?style=flat-square)
@@ -26,13 +26,13 @@
 
 **multi_run** 將所有 Docker 工作區集中管理。它把多個 `compose.yaml` 合併成一個檔案，並使用唯一的 service name，讓你用簡單的指令啟動、停止和管理所有容器。
 
-適用於任何 [template](https://github.com/ycpss91255-docker/template) 為基礎的 repo。
+適用於任何 [template](https://github.com/ycpss91255-lab/template) 為基礎的 repo。
 
 ## 前置需求
 
 - Docker + Docker Compose v2
 - Python 3 + `pyyaml`（`pip install pyyaml`）
-- 以 [template](https://github.com/ycpss91255-docker/template) 建置的 Docker repo（需有 `compose.yaml` + `.env`）
+- 以 [template](https://github.com/ycpss91255-lab/template) 建置的 Docker repo（需有 `compose.yaml` + `.env`）
 
 ## 快速開始
 
@@ -40,7 +40,7 @@
 
 ```bash
 cd ~/Desktop/docker   # 或你放 Docker repo 的位置
-git clone git@github.com:ycpss91255-docker/multi_run.git
+git clone git@github.com:ycpss91255-lab/multi_run.git
 cd multi_run
 ```
 

@@ -1,7 +1,7 @@
 # template
 
-[![Self Test](https://github.com/ycpss91255-docker/template/actions/workflows/self-test.yaml/badge.svg)](https://github.com/ycpss91255-docker/template/actions/workflows/self-test.yaml)
-[![codecov](https://codecov.io/gh/ycpss91255-docker/template/branch/main/graph/badge.svg)](https://codecov.io/gh/ycpss91255-docker/template)
+[![Self Test](https://github.com/ycpss91255-lab/template/actions/workflows/self-test.yaml/badge.svg)](https://github.com/ycpss91255-lab/template/actions/workflows/self-test.yaml)
+[![codecov](https://codecov.io/gh/ycpss91255-lab/template/branch/main/graph/badge.svg)](https://codecov.io/gh/ycpss91255-lab/template)
 
 ![Language](https://img.shields.io/badge/Language-Bash-blue?style=flat-square)
 ![Testing](https://img.shields.io/badge/Testing-Bats-orange?style=flat-square)
@@ -9,7 +9,7 @@
 ![Coverage](https://img.shields.io/badge/Coverage-Kcov-blueviolet?style=flat-square)
 [![License](https://img.shields.io/badge/License-GPL--3.0-yellow?style=flat-square)](./LICENSE)
 
-Shared template for Docker container repos in the [ycpss91255-docker](https://github.com/ycpss91255-docker) organization.
+Shared template for Docker container repos in the [ycpss91255-lab](https://github.com/ycpss91255-lab) organization.
 
 **[English](README.md)** | **[繁體中文](doc/readme/README.zh-TW.md)** | **[简体中文](doc/readme/README.zh-CN.md)** | **[日本語](doc/readme/README.ja.md)**
 
@@ -32,7 +32,7 @@ Shared template for Docker container repos in the [ycpss91255-docker](https://gi
 ```bash
 # New repo: add subtree + init
 git subtree add --prefix=template \
-    git@github.com:ycpss91255-docker/template.git main --squash
+    git@github.com:ycpss91255-lab/template.git main --squash
 ./template/init.sh
 
 # Upgrade to latest
@@ -186,7 +186,7 @@ diagnostics pointing at the missing artifact.
 ```bash
 # 1. Add subtree
 git subtree add --prefix=template \
-    git@github.com:ycpss91255-docker/template.git main --squash
+    git@github.com:ycpss91255-lab/template.git main --squash
 
 # 2. Initialize symlinks (one command)
 ./template/init.sh
@@ -213,7 +213,7 @@ Repos replace local `build-worker.yaml` / `release-worker.yaml` with calls to th
 # .github/workflows/main.yaml
 jobs:
   call-docker-build:
-    uses: ycpss91255-docker/template/.github/workflows/build-worker.yaml@v1
+    uses: ycpss91255-lab/template/.github/workflows/build-worker.yaml@v1
     with:
       image_name: ros_noetic
       build_args: |
@@ -224,7 +224,7 @@ jobs:
   call-release:
     needs: call-docker-build
     if: startsWith(github.ref, 'refs/tags/')
-    uses: ycpss91255-docker/template/.github/workflows/release-worker.yaml@v1
+    uses: ycpss91255-lab/template/.github/workflows/release-worker.yaml@v1
     with:
       archive_name_prefix: ros_noetic
 ```

@@ -578,9 +578,9 @@ EOF
   cat > "${_yaml}" <<'EOF'
 jobs:
   call-docker-build:
-    uses: ycpss91255-docker/template/.github/workflows/build-worker.yaml@v0.5.0
+    uses: ycpss91255-lab/template/.github/workflows/build-worker.yaml@v0.5.0
   call-release:
-    uses: ycpss91255-docker/template/.github/workflows/release-worker.yaml@v0.5.0
+    uses: ycpss91255-lab/template/.github/workflows/release-worker.yaml@v0.5.0
 EOF
   # Source upgrade.sh and exercise just the sed block by inlining the
   # production sed commands here, mirroring what upgrade.sh does.

@@ -1,7 +1,7 @@
 # template
 
-[![Self Test](https://github.com/ycpss91255-docker/template/actions/workflows/self-test.yaml/badge.svg)](https://github.com/ycpss91255-docker/template/actions/workflows/self-test.yaml)
-[![codecov](https://codecov.io/gh/ycpss91255-docker/template/branch/main/graph/badge.svg)](https://codecov.io/gh/ycpss91255-docker/template)
+[![Self Test](https://github.com/ycpss91255-lab/template/actions/workflows/self-test.yaml/badge.svg)](https://github.com/ycpss91255-lab/template/actions/workflows/self-test.yaml)
+[![codecov](https://codecov.io/gh/ycpss91255-lab/template/branch/main/graph/badge.svg)](https://codecov.io/gh/ycpss91255-lab/template)
 
 ![Language](https://img.shields.io/badge/Language-Bash-blue?style=flat-square)
 ![Testing](https://img.shields.io/badge/Testing-Bats-orange?style=flat-square)
@@ -9,7 +9,7 @@
 ![Coverage](https://img.shields.io/badge/Coverage-Kcov-blueviolet?style=flat-square)
 [![License](https://img.shields.io/badge/License-GPL--3.0-yellow?style=flat-square)](./LICENSE)
 
-[ycpss91255-docker](https://github.com/ycpss91255-docker) 組織下所有 Docker 容器 repo 的共用模板。
+[ycpss91255-lab](https://github.com/ycpss91255-lab) 組織下所有 Docker 容器 repo 的共用模板。
 
 **[English](../../README.md)** | **[繁體中文](README.zh-TW.md)** | **[简体中文](README.zh-CN.md)** | **[日本語](README.ja.md)**
 
@@ -32,7 +32,7 @@
 ```bash
 # 新 repo：加入 subtree + 初始化
 git subtree add --prefix=template \
-    git@github.com:ycpss91255-docker/template.git main --squash
+    git@github.com:ycpss91255-lab/template.git main --squash
 ./template/init.sh
 
 # 升級到最新版
@@ -185,7 +185,7 @@ assertion helpers。下游 repo 應優先使用這些 helper 而非原生的
 ```bash
 # 1. 加入 subtree
 git subtree add --prefix=template \
-    git@github.com:ycpss91255-docker/template.git main --squash
+    git@github.com:ycpss91255-lab/template.git main --squash
 
 # 2. 初始化 symlinks（一個指令搞定）
 ./template/init.sh
@@ -212,7 +212,7 @@ make upgrade
 # .github/workflows/main.yaml
 jobs:
   call-docker-build:
-    uses: ycpss91255-docker/template/.github/workflows/build-worker.yaml@v1
+    uses: ycpss91255-lab/template/.github/workflows/build-worker.yaml@v1
     with:
       image_name: ros_noetic
       build_args: |
@@ -223,7 +223,7 @@ jobs:
   call-release:
     needs: call-docker-build
     if: startsWith(github.ref, 'refs/tags/')
-    uses: ycpss91255-docker/template/.github/workflows/release-worker.yaml@v1
+    uses: ycpss91255-lab/template/.github/workflows/release-worker.yaml@v1
     with:
       archive_name_prefix: ros_noetic
 ```

@@ -1,6 +1,6 @@
 # multi_run
 
-[![Self Test](https://github.com/ycpss91255-docker/multi_run/actions/workflows/self-test.yaml/badge.svg)](https://github.com/ycpss91255-docker/multi_run/actions/workflows/self-test.yaml)
+[![Self Test](https://github.com/ycpss91255-lab/multi_run/actions/workflows/self-test.yaml/badge.svg)](https://github.com/ycpss91255-lab/multi_run/actions/workflows/self-test.yaml)
 
 ![Language](https://img.shields.io/badge/Language-Bash-blue?style=flat-square)
 ![Testing](https://img.shields.io/badge/Testing-Bats-orange?style=flat-square)
@@ -38,7 +38,7 @@
 
 ## 概述
 
-管理多个 [template](https://github.com/ycpss91255-docker/template) 容器。各工作区的 `compose.yaml` 会被展开并合并成一个 compose 文件，使用唯一 service name 避免冲突。
+管理多个 [template](https://github.com/ycpss91255-lab/template) 容器。各工作区的 `compose.yaml` 会被展开并合并成一个 compose 文件，使用唯一 service name 避免冲突。
 
 ### 架构
 
