@@ -5,6 +5,7 @@ on:
     branches: [main, master]
     tags: ['v*']
   pull_request:
+  merge_group:
   workflow_dispatch:
 
 jobs:
@@ -24,6 +25,18 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
           directory: ./coverage
           fail_ci_if_error: false
+
+  ci-rollup:
+    if: always()
+    needs: [test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: 彙整必要 job 結果
+        run: |
+          case "${{ needs.test.result }}" in
+            success|skipped) ;;
+            *) echo "test: ${{ needs.test.result }}"; exit 1 ;;
+          esac
 
   release:
     needs: test
