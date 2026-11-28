@@ -1,6 +1,6 @@
 # multi_run
 
-[![Self Test](https://github.com/ycpss91255-docker/multi_run/actions/workflows/self-test.yaml/badge.svg)](https://github.com/ycpss91255-docker/multi_run/actions/workflows/self-test.yaml)
+[![Self Test](https://github.com/ycpss91255-lab/multi_run/actions/workflows/self-test.yaml/badge.svg)](https://github.com/ycpss91255-lab/multi_run/actions/workflows/self-test.yaml)
 
 ![Language](https://img.shields.io/badge/Language-Bash-blue?style=flat-square)
 ![Testing](https://img.shields.io/badge/Testing-Bats-orange?style=flat-square)
@@ -38,7 +38,7 @@
 
 ## 概要
 
-複数の [template](https://github.com/ycpss91255-docker/template) コンテナを一括管理。各ワークスペースの `compose.yaml` を展開・統合し、ユニークなサービス名で競合を回避。
+複数の [template](https://github.com/ycpss91255-lab/template) コンテナを一括管理。各ワークスペースの `compose.yaml` を展開・統合し、ユニークなサービス名で競合を回避。
 
 ### アーキテクチャ
 

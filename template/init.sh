@@ -52,7 +52,7 @@ _create_symlinks() {
 
 _detect_template_version() {
   git ls-remote --tags --sort=-v:refname \
-    git@github.com:ycpss91255-docker/template.git 2>/dev/null \
+    git@github.com:ycpss91255-lab/template.git 2>/dev/null \
     | grep -oP 'refs/tags/v\d+\.\d+\.\d+$' \
     | head -1 \
     | sed 's|refs/tags/||' || true
@@ -166,14 +166,14 @@ on:
 
 jobs:
   call-docker-build:
-    uses: ycpss91255-docker/template/.github/workflows/build-worker.yaml@${ref}
+    uses: ycpss91255-lab/template/.github/workflows/build-worker.yaml@${ref}
     with:
       image_name: ${name}
 
   call-release:
     needs: call-docker-build
     if: startsWith(github.ref, 'refs/tags/')
-    uses: ycpss91255-docker/template/.github/workflows/release-worker.yaml@${ref}
+    uses: ycpss91255-lab/template/.github/workflows/release-worker.yaml@${ref}
     with:
       archive_name_prefix: ${name}
 YAML
@@ -280,7 +280,7 @@ Options:
 
 Run from the repo root after:
   git subtree add --prefix=template \
-      git@github.com:ycpss91255-docker/template.git <version> --squash
+      git@github.com:ycpss91255-lab/template.git <version> --squash
 EOF
     return 0
   fi

@@ -12,7 +12,7 @@ SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
 readonly SCRIPT_DIR
 REPO_ROOT="$(cd -- "${SCRIPT_DIR}/.." && pwd -P)"
 readonly REPO_ROOT
-TEMPLATE_REMOTE="git@github.com:ycpss91255-docker/template.git"
+TEMPLATE_REMOTE="git@github.com:ycpss91255-lab/template.git"
 readonly TEMPLATE_REMOTE
 VERSION_FILE="${REPO_ROOT}/.template_version"
 readonly VERSION_FILE
